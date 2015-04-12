@@ -24,7 +24,13 @@
                                    style:UIBarButtonItemStyleDone
                                    target:self
                                    action:@selector(toggleSM)];
-    self.navigationItem.leftBarButtonItem = flipButton;
+    
+    if ([RGSideMenuRoot instance].sideMenuDirection == RGSideMenuDirectionLeft) {
+        self.navigationItem.leftBarButtonItem = flipButton;
+    }
+    else {
+        self.navigationItem.rightBarButtonItem = flipButton;
+    }
     
     self.numLabel.text = [NSString stringWithFormat:@"#%zd", [[self.navigationController viewControllers] count]];
     

@@ -30,8 +30,6 @@
 		90B309691AD84A4A0049C534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90B3096B1AD84A4A0049C534 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		90B3096E1AD84A4A0049C534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		90B309791AD84A4A0049C534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90B3097A1AD84A4A0049C534 /* RGSideMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RGSideMenuTests.m; sourceTree = "<group>"; };
 		90B309841AD84A710049C534 /* RGSideMenuRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSideMenuRoot.h; sourceTree = "<group>"; };
 		90B309851AD84A710049C534 /* RGSideMenuRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSideMenuRoot.m; sourceTree = "<group>"; };
 		90B309891AD84B710049C534 /* RGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGNavigationController.h; sourceTree = "<group>"; };
@@ -53,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				90B3095D1AD84A4A0049C534 /* RGSideMenu */,
-				90B309771AD84A4A0049C534 /* RGSideMenuTests */,
 				90B3095C1AD84A4A0049C534 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,23 +79,6 @@
 			children = (
 				90B3095F1AD84A4A0049C534 /* Info.plist */,
 				90B309601AD84A4A0049C534 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		90B309771AD84A4A0049C534 /* RGSideMenuTests */ = {
-			isa = PBXGroup;
-			children = (
-				90B3097A1AD84A4A0049C534 /* RGSideMenuTests.m */,
-				90B309781AD84A4A0049C534 /* Supporting Files */,
-			);
-			path = RGSideMenuTests;
-			sourceTree = "<group>";
-		};
-		90B309781AD84A4A0049C534 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				90B309791AD84A4A0049C534 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

@@ -14,6 +14,8 @@
 
 @interface RGSideMenuRoot ()
 
+@property (nonatomic) bool isSideMenuOpen;
+
 @end
 
 @implementation RGSideMenuRoot
@@ -42,14 +44,15 @@
 }
 
 
--(id) initWithRootViewController:(UIViewController*)vc {
+-(id) initWithRootViewController:(UIViewController*)vc sideMenuDirection:(RGSideMenuDirection)direction {
     
     self = [RGSideMenuRoot instance];
     
     if (self) {
         
         self.navigationController = [[RGNavigationController alloc] initWithRootViewController:vc];
-        
+        self.sideMenuDirection = direction;
+        self.isSideMenuOpen = false;
     }
     
     return self;
@@ -60,7 +63,23 @@
     rglogdbg_func
     [super viewDidLoad];
     
-    self.sideMenu.view.frame = CGRectOffset(self.sideMenu.view.frame, -self.sideMenu.view.frame.size.width, 0);
+    float dx = 0;
+    
+    switch (self.sideMenuDirection) {
+        case RGSideMenuDirectionLeft:
+        {
+            dx = -self.sideMenu.view.frame.size.width;
+            break;
+        }
+            
+        case RGSideMenuDirectionRight:
+        {
+            dx = self.view.frame.size.width;
+            break;
+        }
+    }
+    
+    self.sideMenu.view.frame = CGRectOffset(self.sideMenu.view.frame, dx, 0);
     [self.view addSubview:self.sideMenu.view];
     
     [self.view addSubview:self.navigationController.view];
@@ -76,7 +95,7 @@
     int newTopVCPosition = 0;
     
     // should open
-    if (self.sideMenu.view.frame.origin.x < 0) {
+    if (!self.isSideMenuOpen) {
         newSideMenuPosition = self.sideMenu.view.frame.size.width;
         newTopVCPosition = self.sideMenu.view.frame.size.width;
         
@@ -85,13 +104,17 @@
     }
     
     // should close
-    else if (self.sideMenu.view.frame.origin.x == 0) {
+    else if (self.isSideMenuOpen) {
         newSideMenuPosition = -self.sideMenu.view.frame.size.width;
         newTopVCPosition = -self.sideMenu.view.frame.size.width;
         
         [[NSNotificationCenter defaultCenter] postNotificationName:RGSideMenuWillCloseNotify object:nil];
         
     }
+    
+    newSideMenuPosition = (self.sideMenuDirection == RGSideMenuDirectionLeft) ? newSideMenuPosition : -1 * newSideMenuPosition;
+    newTopVCPosition = (self.sideMenuDirection == RGSideMenuDirectionLeft) ? newTopVCPosition : -1 * newTopVCPosition;
+    
     
     [UIView animateWithDuration:self.animationDuration animations:^{
         
@@ -100,6 +123,7 @@
         
     } completion:^(BOOL finished) {
         if (finished)
+            self.isSideMenuOpen = !self.isSideMenuOpen;
             if (self.sideMenu.view.frame.origin.x == 0) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:RGSideMenuDidOpenNotify object:nil];
             }

@@ -26,7 +26,9 @@
     ViewController *vc = [sb instantiateViewControllerWithIdentifier:@"ViewController"];
     UIViewController *smvc = [sb instantiateViewControllerWithIdentifier:@"SideMenuVC"];
     smvc.view.frame = CGRectMake(0, 0, 200, smvc.view.frame.size.height);
-    RGSideMenuRoot *sideMenuRoot = [[RGSideMenuRoot alloc] initWithRootViewController:vc];
+    
+    
+    RGSideMenuRoot *sideMenuRoot = [[RGSideMenuRoot alloc] initWithRootViewController:vc sideMenuDirection:RGSideMenuDirectionRight];
     sideMenuRoot.sideMenu = smvc;
     
     

@@ -33,7 +33,7 @@ typedef NS_OPTIONS(NSUInteger, RGSideMenuDirection) {
 
 +(RGSideMenuRoot*)instance;
 
--(id) initWithRootViewController:(UIViewController*)vc;
+-(id) initWithRootViewController:(UIViewController*)vc sideMenuDirection:(RGSideMenuDirection)direction;
 -(void)toggleSideMenu;
 
 
