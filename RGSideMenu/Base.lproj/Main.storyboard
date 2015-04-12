@@ -35,16 +35,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbF-JB-Oef">
-                                <rect key="frame" x="84" y="400" width="153" height="148"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Controller #1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbF-JB-Oef">
+                                <rect key="frame" x="46" y="400" width="229" height="83"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CE-fY-v9O">
-                                <rect key="frame" x="75" y="209" width="170" height="150"/>
+                                <rect key="frame" x="46" y="236" width="229" height="95"/>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.62745098040000002" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="add VC">
+                                <state key="normal" title="Push View Controller">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -55,13 +55,13 @@
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1CE-fY-v9O" firstAttribute="centerX" secondItem="PbF-JB-Oef" secondAttribute="centerX" id="68f-oC-XDd"/>
-                            <constraint firstItem="1CE-fY-v9O" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="145" id="J1t-Od-6PB"/>
+                            <constraint firstItem="1CE-fY-v9O" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="172" id="J1t-Od-6PB"/>
                             <constraint firstItem="1CE-fY-v9O" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="UpL-iC-KeD"/>
                             <constraint firstItem="1CE-fY-v9O" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="a23-jT-kB1"/>
-                            <constraint firstItem="PbF-JB-Oef" firstAttribute="top" secondItem="1CE-fY-v9O" secondAttribute="bottom" constant="41" id="cch-zE-V4M"/>
-                            <constraint firstItem="PbF-JB-Oef" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="68" id="eaH-k8-Hhv"/>
-                            <constraint firstItem="1CE-fY-v9O" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="59" id="iGG-PW-DXn"/>
-                            <constraint firstAttribute="bottom" secondItem="PbF-JB-Oef" secondAttribute="bottom" constant="20" symbolic="YES" id="p6A-p6-cUN"/>
+                            <constraint firstItem="PbF-JB-Oef" firstAttribute="top" secondItem="1CE-fY-v9O" secondAttribute="bottom" constant="69" id="cch-zE-V4M"/>
+                            <constraint firstItem="PbF-JB-Oef" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="eaH-k8-Hhv"/>
+                            <constraint firstItem="1CE-fY-v9O" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="iGG-PW-DXn"/>
+                            <constraint firstAttribute="bottom" secondItem="PbF-JB-Oef" secondAttribute="bottom" constant="85" id="p6A-p6-cUN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lcA-II-EbL"/>
@@ -101,8 +101,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I m side menu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85u-Z0-sXg">
-                                <rect key="frame" x="86" y="251" width="148" height="54"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I Am Side Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85u-Z0-sXg">
+                                <rect key="frame" x="60" y="254" width="201" height="59"/>
                                 <color key="backgroundColor" red="0.84313725490000002" green="0.33725490200000002" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -112,8 +112,8 @@
                         <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="85u-Z0-sXg" firstAttribute="centerX" secondItem="REl-Uy-glr" secondAttribute="centerX" id="BFk-eS-Ovk"/>
-                            <constraint firstItem="85u-Z0-sXg" firstAttribute="top" secondItem="fOR-od-aVX" secondAttribute="bottom" constant="231" id="Rjn-RT-GMk"/>
-                            <constraint firstItem="uCp-C5-UcT" firstAttribute="top" secondItem="85u-Z0-sXg" secondAttribute="bottom" constant="263" id="cAt-Ot-HxB"/>
+                            <constraint firstItem="85u-Z0-sXg" firstAttribute="top" secondItem="fOR-od-aVX" secondAttribute="bottom" constant="234" id="Rjn-RT-GMk"/>
+                            <constraint firstItem="uCp-C5-UcT" firstAttribute="top" secondItem="85u-Z0-sXg" secondAttribute="bottom" constant="255" id="cAt-Ot-HxB"/>
                         </constraints>
                     </view>
                 </viewController>

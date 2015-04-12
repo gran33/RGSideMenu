@@ -28,8 +28,9 @@
     smvc.view.frame = CGRectMake(0, 0, 200, smvc.view.frame.size.height);
     
     
-    RGSideMenuRoot *sideMenuRoot = [[RGSideMenuRoot alloc] initWithRootViewController:vc sideMenuDirection:RGSideMenuDirectionRight];
+    RGSideMenuRoot *sideMenuRoot = [[RGSideMenuRoot alloc] initWithRootViewController:vc sideMenuDirection:RGSideMenuDirectionLeft];
     sideMenuRoot.sideMenu = smvc;
+//    sideMenuRoot.animationDuration = 3.0;
     
     
     self.window.rootViewController = sideMenuRoot;

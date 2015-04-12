@@ -29,7 +29,7 @@
         self.navigationItem.leftBarButtonItem = flipButton;
     }
     else {
-        self.navigationItem.rightBarButtonItem = flipButton;
+        self.navigationItem.leftBarButtonItem = flipButton;
     }
     
     self.numLabel.text = [NSString stringWithFormat:@"#%zd", [[self.navigationController viewControllers] count]];
