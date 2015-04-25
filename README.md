@@ -1,6 +1,6 @@
 # RGSideMenu
 Side Menu for iOS written in Objective-C
-
+```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // the visible UIViewController
@@ -13,3 +13,4 @@ Side Menu for iOS written in Objective-C
     
     return YES;
 }
+```
