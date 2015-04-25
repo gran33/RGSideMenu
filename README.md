@@ -1,5 +1,8 @@
 # RGSideMenu
 Side Menu for iOS written in Objective-C
+
+How to install with Storyboard (storyboard file name is "Main"):
+
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -14,3 +17,9 @@ Side Menu for iOS written in Objective-C
     return YES;
 }
 ```
+To change ```Storyboard``` name see this ```macro``` loacted in the ```.pch``` file:
+```objective-c
+#define STORYBOARD      ([UIStoryboard storyboardWithName:@"Main" bundle:nil])
+```
+
+
