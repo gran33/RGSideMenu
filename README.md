@@ -1,7 +1,7 @@
 # RGSideMenu
 Side Menu for iOS written in Objective-C
 
-![Alt text](/GIFs/leftAnimation.gif?raw=true ""){ height: 200px; }
+![Alt text](/GIFs/leftAnimation.gif?raw=true "" =300x300)
 ![Alt text](/GIFs/rightAnimation.gif?raw=true "")
 
 
