@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import "RGSideMenuRoot.h"
 
+
 @interface ViewController ()
+
 
 
 @end
@@ -25,11 +27,13 @@
                                    target:self
                                    action:@selector(toggleSM)];
     
-    if ([RGSideMenuRoot instance].sideMenuDirection == RGSideMenuDirectionLeft) {
+    
+    
+    if (APP_DELEGATE.sideMenuRoot.sideMenuDirection == RGSideMenuDirectionLeft) {
         self.navigationItem.leftBarButtonItem = flipButton;
     }
     else {
-        self.navigationItem.leftBarButtonItem = flipButton;
+        self.navigationItem.rightBarButtonItem = flipButton;
     }
     
     self.numLabel.text = [NSString stringWithFormat:@"#%zd", [[self.navigationController viewControllers] count]];
@@ -40,7 +44,7 @@
 
 -(void)toggleSM {
     
-    [[RGSideMenuRoot instance] toggleSideMenu];
+    [APP_DELEGATE.sideMenuRoot toggleSideMenu];
 
 }
 

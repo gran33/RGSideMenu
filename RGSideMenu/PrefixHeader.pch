@@ -17,7 +17,10 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "RGLogger.h"
+#import "AppDelegate.h"
 
+#define APP_DELEGATE    ((AppDelegate*)[UIApplication sharedApplication].delegate)
+#define STORYBOARD      ([UIStoryboard storyboardWithName:@"Main" bundle:nil])
 #endif
 
 

@@ -29,39 +29,37 @@
 }
 
 
-+(instancetype)instance {
-    
-    static RGSideMenuRoot *sharedInstance = nil;
-    static dispatch_once_t onceToken;
-    
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[RGSideMenuRoot alloc] init];
-        
-    });
-    
-    return sharedInstance;
-    
+//+(instancetype)instance {
+//    
+//    static RGSideMenuRoot *sharedInstance = nil;
+//    static dispatch_once_t onceToken;
+//    
+//    dispatch_once(&onceToken, ^{
+//        sharedInstance = [[RGSideMenuRoot alloc] init];
+//        
+//    });
+//    
+//    return sharedInstance;
+//    
+//}
+
+
+-(void)setRootVC:(UIViewController*)viewController {
+    self.navigationController = [[RGNavigationController alloc] initWithRootViewController:viewController];
 }
 
 
--(id) initWithRootViewController:(UIViewController*)vc sideMenuDirection:(RGSideMenuDirection)direction {
-    
-    self = [RGSideMenuRoot instance];
-    
-    if (self) {
-        
-        self.navigationController = [[RGNavigationController alloc] initWithRootViewController:vc];
-        self.sideMenuDirection = direction;
-        self.isSideMenuOpen = false;
-    }
-    
-    return self;
-    
-}
+
 
 - (void)viewDidLoad {
     rglogdbg_func
     [super viewDidLoad];
+    
+    UIViewController *sideMenuVC = [STORYBOARD instantiateViewControllerWithIdentifier:@"SideMenuVC"];
+    sideMenuVC.view.frame = CGRectMake(0, 0, 200, sideMenuVC.view.frame.size.height);
+    self.sideMenu = sideMenuVC;
+
+    self.isSideMenuOpen = false;
     
     float dx = 0;
     
@@ -83,9 +81,6 @@
     [self.view addSubview:self.sideMenu.view];
     
     [self.view addSubview:self.navigationController.view];
-    
-    
-    
     
 }
 

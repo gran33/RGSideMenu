@@ -17,8 +17,9 @@
 #define RGSideMenuDidCloseNotify          @"RGSideMenuDidClose"
 
 typedef NS_OPTIONS(NSUInteger, RGSideMenuDirection) {
-    RGSideMenuDirectionLeft         = 0,
-    RGSideMenuDirectionRight        = 1 << 0
+    RGSideMenuDirectionNone         = 0,
+    RGSideMenuDirectionLeft         = 1 << 0,
+    RGSideMenuDirectionRight        = 1 << 1
 };
 
 
@@ -31,9 +32,10 @@ typedef NS_OPTIONS(NSUInteger, RGSideMenuDirection) {
 @property (nonatomic) RGSideMenuDirection sideMenuDirection;
 
 
-+(RGSideMenuRoot*)instance;
+//+(RGSideMenuRoot*)instance;
 
 -(id) initWithRootViewController:(UIViewController*)vc sideMenuDirection:(RGSideMenuDirection)direction;
+-(void)setRootVC:(UIViewController*)viewController;
 -(void)toggleSideMenu;
 
 

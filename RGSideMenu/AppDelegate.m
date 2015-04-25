@@ -7,11 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import "RGSideMenuRoot.h"
 #import "ViewController.h"
 
 
 @interface AppDelegate ()
+
+
 
 @end
 
@@ -20,22 +21,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    // the visible UIViewController
+    ViewController *vc = [STORYBOARD instantiateViewControllerWithIdentifier:@"ViewController"];
     
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    ViewController *vc = [sb instantiateViewControllerWithIdentifier:@"ViewController"];
-    UIViewController *smvc = [sb instantiateViewControllerWithIdentifier:@"SideMenuVC"];
-    smvc.view.frame = CGRectMake(0, 0, 200, smvc.view.frame.size.height);
+    self.sideMenuRoot = (RGSideMenuRoot*)self.window.rootViewController;
+    self.sideMenuRoot.sideMenuDirection = RGSideMenuDirectionRight;
     
-    
-    RGSideMenuRoot *sideMenuRoot = [[RGSideMenuRoot alloc] initWithRootViewController:vc sideMenuDirection:RGSideMenuDirectionLeft];
-    sideMenuRoot.sideMenu = smvc;
-//    sideMenuRoot.animationDuration = 3.0;
-    
-    
-    self.window.rootViewController = sideMenuRoot;
-    [self.window makeKeyAndVisible];
-    
+    [self.sideMenuRoot setRootVC:vc];
+    self.sideMenuRoot.animationDuration = 0.2;
     
     return YES;
 }

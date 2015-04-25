@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		900C073B1AEB659F00B8B65E /* RGSideMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 900C073A1AEB659F00B8B65E /* RGSideMenuVC.m */; };
 		90B309611AD84A4A0049C534 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B309601AD84A4A0049C534 /* main.m */; };
 		90B309641AD84A4A0049C534 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B309631AD84A4A0049C534 /* AppDelegate.m */; };
 		90B309671AD84A4A0049C534 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B309661AD84A4A0049C534 /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		900C07391AEB659F00B8B65E /* RGSideMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGSideMenuVC.h; sourceTree = "<group>"; };
+		900C073A1AEB659F00B8B65E /* RGSideMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGSideMenuVC.m; sourceTree = "<group>"; };
 		907BB3D11AD921A000913318 /* RGLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGLogger.h; sourceTree = "<group>"; };
 		907BB3D21AD9221C00913318 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		90B3095B1AD84A4A0049C534 /* RGSideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGSideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +93,8 @@
 				90B309851AD84A710049C534 /* RGSideMenuRoot.m */,
 				90B309891AD84B710049C534 /* RGNavigationController.h */,
 				90B3098A1AD84B710049C534 /* RGNavigationController.m */,
+				900C07391AEB659F00B8B65E /* RGSideMenuVC.h */,
+				900C073A1AEB659F00B8B65E /* RGSideMenuVC.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90B309671AD84A4A0049C534 /* ViewController.m in Sources */,
+				900C073B1AEB659F00B8B65E /* RGSideMenuVC.m in Sources */,
 				90B309641AD84A4A0049C534 /* AppDelegate.m in Sources */,
 				90B3098B1AD84B710049C534 /* RGNavigationController.m in Sources */,
 				90B309861AD84A710049C534 /* RGSideMenuRoot.m in Sources */,

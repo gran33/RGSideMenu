@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fAZ-u8-OG9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fAZ-u8-OG9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Side Menu Root-->
         <scene sceneID="YAl-Wu-mYX">
             <objects>
-                <viewController id="fAZ-u8-OG9" sceneMemberID="viewController">
+                <viewController id="fAZ-u8-OG9" customClass="RGSideMenuRoot" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t3y-ti-czm"/>
                         <viewControllerLayoutGuide type="bottom" id="N6F-HL-D7D"/>
@@ -76,7 +76,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ysl-dD-Vfr">
             <objects>
-                <navigationController id="zlj-uG-Uvy" sceneMemberID="viewController">
+                <navigationController id="zlj-uG-Uvy" customClass="RGNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qNU-s4-d3X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -89,20 +89,20 @@
             </objects>
             <point key="canvasLocation" x="-158" y="2"/>
         </scene>
-        <!--View Controller-->
+        <!--Side MenuVC-->
         <scene sceneID="5ra-Kz-5QJ">
             <objects>
-                <viewController storyboardIdentifier="SideMenuVC" id="pZZ-P4-SP8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SideMenuVC" id="pZZ-P4-SP8" customClass="RGSideMenuVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fOR-od-aVX"/>
                         <viewControllerLayoutGuide type="bottom" id="uCp-C5-UcT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="REl-Uy-glr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I Am Side Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85u-Z0-sXg">
-                                <rect key="frame" x="60" y="254" width="201" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Am Side Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85u-Z0-sXg">
+                                <rect key="frame" x="17" y="254" width="167" height="59"/>
                                 <color key="backgroundColor" red="0.84313725490000002" green="0.33725490200000002" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -116,6 +116,8 @@
                             <constraint firstItem="uCp-C5-UcT" firstAttribute="top" secondItem="85u-Z0-sXg" secondAttribute="bottom" constant="255" id="cAt-Ot-HxB"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="568"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adf-QV-aGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
