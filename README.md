@@ -1,6 +1,8 @@
 # RGSideMenu
 Side Menu for iOS written in Objective-C
 
+![Alt text](/RGSideMenu/GIFs/leftAnimation.gif?raw=true "Optional Title")
+
 How to install with Storyboard (storyboard file name is "Main"):
 
 ```objective-c
